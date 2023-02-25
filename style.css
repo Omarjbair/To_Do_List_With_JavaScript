@@ -1,0 +1,101 @@
+/*start Global Rules*/
+body{
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+*{
+    box-sizing: border-box;
+}
+button{
+    cursor: pointer;
+}
+/*end Global Rules*/
+/*start variables*/
+:root{
+    --main-color: #DE6590;
+}
+/*end variables*/
+/*start project styling*/
+.project{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+}
+.project .container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.project .container h1{
+    font-size: 35px;
+    font-weight: lighter;
+}
+
+.project .container .inputs{
+    display: flex;
+    justify-content: center;
+}
+
+.project .container .inputs input{
+    width: 350px;
+    padding: 15px;
+    border: 2px solid var(--main-color);
+    border-right: none;
+}
+@media (max-width:767px) {
+    .project .container .inputs input{
+        width: 250px;
+    }
+}
+.project .container .inputs input::placeholder{
+    color: var(--main-color);
+    font-size: 15px;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+}
+input:focus{
+    outline: none;
+}
+input:focus::placeholder{
+    opacity: 0;
+}
+.project .container .inputs button{
+    padding: 16px;
+    width: 100px;
+    background: var(--main-color);
+    border: none;
+    color: white;
+    font-size: 15px;
+}
+.project .container .todo_word{
+    align-self: start;
+    font-size: 15px;
+    margin-top: 40px;
+}
+.project .container .todo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 30px 0;
+    border-bottom: 1px var(--main-color) dotted;
+}
+.project .container .todo h1{
+    color: #AFA9C7;
+    font-size: 20px;
+    max-width: 250px;
+}
+.project .container .todo button{
+    padding: 10px;
+    background: var(--main-color);
+    border: none;
+    color: white;
+    font-weight: lighter;
+}
+/*end project styling*/
